@@ -21,6 +21,8 @@ const server = http.createServer((req, res)=>{
 		}
    	  )
 	}
+
+	/* //JSON data test 
 	if(req.url === '/api/users'){
 		const users = [
 			{name: 'Test Name', age: 40},
@@ -28,7 +30,8 @@ const server = http.createServer((req, res)=>{
 		]
 		res.writeHead(200, {'Content-Type': 'application/json'});
 		res.end(JSON.stringify(users));
-	}
+	}*/
+	
 	//Build file path
 	let filePath = path.join(
 		__dirname, 'public', req.url === '/' ? 'index.ejs': req.url
