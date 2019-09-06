@@ -6,7 +6,7 @@ const server = http.createServer((req, res)=>{
 	//console.log(req.url);
 
 	if(req.url === '/'){
-		fs.readFile(path.join(__dirname, 'public',  'index.html'), (err, content) => {
+		fs.readFile(path.join(__dirname, 'public',  'index.ejs'), (err, content) => {
 			if(err) throw err;
 			res.writeHead(200, {'Content-Type': 'text/html'});
 			res.end(content);
@@ -14,7 +14,7 @@ const server = http.createServer((req, res)=>{
 	  )
 	}
 	if(req.url === '/about'){
-		fs.readFile(path.join(__dirname, 'public',  'about.html'), (err, content) => {
+		fs.readFile(path.join(__dirname, 'public',  'about.ejs'), (err, content) => {
 			if(err) throw err;
 			res.writeHead(200, {'Content-Type': 'text/html'});
 			res.end(content);
@@ -31,7 +31,7 @@ const server = http.createServer((req, res)=>{
 	}
 	//Build file path
 	let filePath = path.join(
-		__dirname, 'public', req.url === '/' ? 'index.html': req.url
+		__dirname, 'public', req.url === '/' ? 'index.ejs': req.url
 	);
 	//Extension of file
 	let extname = path.extname(filePath);
@@ -83,4 +83,4 @@ const server = http.createServer((req, res)=>{
 
 
 const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`Server running on port ${PORT}...`));
