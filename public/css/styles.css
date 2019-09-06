@@ -1,6 +1,6 @@
 body{
 	text-align: center;
-	background-color: #333;
+	background-color: rgba(51, 51, 51, 0.836);
 	color: limegreen;
 }
 .parent{ 
@@ -11,7 +11,6 @@ body{
         min-width: 400px;
 }
 #label {
-
         transform: translate(0%, -44%)
 }
 .child{
