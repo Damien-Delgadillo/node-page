@@ -1,5 +1,39 @@
 body{
 	text-align: center;
 	background-color: #333;
-	color: #fff;
+	color: limegreen;
+}
+.parent{ 
+        border-radius: 15px;
+        overflow: hidden;
+        display: inline-block;
+        border: 1px solid #fff; 
+        min-width: 400px;
+}
+#label {
+
+        transform: translate(0%, -44%)
+}
+.child{
+        text-decoration: none;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        /*font-family: cursive;*/
+        color:white;
+        width:100px; 
+        height:45px; 
+        float:left; 
+        margin-left:0px; 
+        text-align: center; 
+        line-height: 150px; 
+        cursor: pointer; 
+        background-color: rgb(65, 65, 65);
+}
+.child:hover{
+        background-color: #fff;
+        color: black;
+}
+.active{
+        background-color: limegreen; 
+        color: #fff; 
+        font-weight: bold;
 }
